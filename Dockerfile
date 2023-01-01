@@ -4,7 +4,7 @@ ADD . /pleco
 WORKDIR /pleco
 RUN go get && go build -o /pleco.bin main.go
 
-FROM debian:buster-slim as run
+FROM debian:buster-slim@sha256:8937a7404d40df0015dfadf4ded7ba2e1820cb556a7d1407431c1f482830008e as run
 
 RUN apt-get update && apt-get install -y ca-certificates && apt-get clean
 COPY --from=build /pleco.bin /usr/bin/pleco
