@@ -1,4 +1,4 @@
-FROM golang:1.18.3-buster as build
+FROM golang:1.18.3-buster@sha256:7acdbec4276ce3c8915ffa03148bd4b41dfb46a190fd1242e9df5b11061d282d as build
 
 ADD . /pleco
 WORKDIR /pleco
